@@ -1,50 +1,70 @@
+
 # 🏛️ RTI-Gen — AI-Powered RTI Application Generator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
-[![React](https://img.shields.io/badge/React-19-61DAFB.svg)](https://reactjs.org/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-6+-47A248.svg)](https://www.mongodb.com/)
+<p align="center">
+   <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License" />
+   <img src="https://img.shields.io/badge/Node.js-18+-green.svg" alt="Node.js" />
+   <img src="https://img.shields.io/badge/React-19-61DAFB.svg" alt="React" />
+   <img src="https://img.shields.io/badge/MongoDB-6+-47A248.svg" alt="MongoDB" />
+   <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg" alt="PRs Welcome" />
+   <img src="https://img.shields.io/badge/GSoC-2026-orange.svg" alt="GSoC 2026" />
+</p>
 
-An open-source, intelligent platform that helps citizens generate structured, legally compliant RTI (Right to Information) applications using rule-based logic, validation engines, and configurable templates.
+<p align="center">
+   <b>Empowering Citizens, One RTI at a Time</b><br>
+   <i>Made with ❤️ for Google Summer of Code (GSoC) and the open-source community</i>
+</p>
 
-![RTI-Gen Banner](https://via.placeholder.com/800x200?text=RTI-Gen+-+Empowering+Citizens)
+---
+
+**RTI-Gen** is an open-source, AI-powered platform that helps Indian citizens generate legally compliant RTI (Right to Information) applications. It transforms plain-language requests into structured, ready-to-file RTI drafts using intelligent logic, rule-based validation, and configurable templates.
+
+<p align="center">
+   <img src="https://via.placeholder.com/800x200?text=RTI-Gen+-+Empowering+Citizens" alt="RTI-Gen Banner" />
+</p>
 
 ---
 
 ## 📋 Table of Contents
 
-- [Overview](#-overview)
+- [Project Overview](#-project-overview)
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Architecture](#-architecture)
 - [Getting Started](#-getting-started)
 - [Project Structure](#-project-structure)
 - [API Documentation](#-api-documentation)
+- [Testing](#-testing)
 - [Contributing](#-contributing)
+- [Community & Code of Conduct](#-community--code-of-conduct)
 - [License](#-license)
 
 ---
 
-## 🎯 Overview
+## 🎯 Project Overview
 
-### Problem Statement
+### What is RTI-Gen?
+RTI-Gen is a civic-tech project designed to make the Right to Information (RTI) process accessible, transparent, and user-friendly for everyone. It is especially built for the Indian context, but the architecture is extensible for other legal document generation use cases.
 
+### Why RTI-Gen?
 Many citizens struggle to file RTI applications because:
-- They don't know the correct legal format
-- They're unsure what information to request
+- They do not know the correct legal format
+- They are unsure what information to request
 - Templates vary across departments
 - Errors can lead to rejection
 - Language barriers exist
 - Existing tools are static and non-intelligent
 
-### Solution
-
+### How does it help?
 RTI-Gen solves these problems by:
 - Converting user intent into structured RTI questions
 - Applying rule-based logic to ensure correctness
 - Generating drafts using configurable templates
 - Validating drafts and providing actionable feedback
 - Supporting extensibility for future features like multilingual support
+
+### GSoC & Open Source
+This project is developed as part of Google Summer of Code (GSoC) 2026 and welcomes contributions from the global open-source community. We value diversity, collaboration, and learning.
 
 ---
 
@@ -319,23 +339,23 @@ npm run lint          # Run ESLint
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! Here's how you can help:
+We welcome contributions from students, developers, and civic-tech enthusiasts! Whether you are a GSoC aspirant, a first-time open-source contributor, or an experienced developer, your help is appreciated.
 
+### How to Contribute
 1. **Fork** the repository
 2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
 3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
+4. **Push** to your branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request (PR) on GitHub
 
 ### Development Guidelines
-
-- Follow the existing code style
+- Follow the existing code style and best practices
 - Write meaningful commit messages
 - Add tests for new features
 - Update documentation as needed
+- Be respectful and collaborative
 
 ### Areas for Contribution
-
 - 🌐 Add more language translations
 - 📝 Create new RTI templates
 - 🧪 Write more test cases
@@ -344,29 +364,43 @@ We welcome contributions from the community! Here's how you can help:
 
 ---
 
+## 🌍 Community & Code of Conduct
+
+We are committed to fostering a welcoming and inclusive environment for all contributors. Please read our [Code of Conduct](https://github.com/ChronalLabs/RTI-APPLICATION-GENERATOR/blob/main/CODE_OF_CONDUCT.md) before participating.
+
+Join our discussions, ask questions, and connect with the community:
+- **Issues**: [GitHub Issues](https://github.com/ChronalLabs/RTI-APPLICATION-GENERATOR/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/ChronalLabs/RTI-APPLICATION-GENERATOR/discussions)
+
+---
+
+
 ## 📄 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
+
 ## 🙏 Acknowledgments
 
 - Inspired by the need to make RTI filing accessible to all citizens
 - Built with ❤️ for civic-tech and open-source communities
-- Special thanks to all contributors
+- Special thanks to all contributors, mentors, and GSoC organizers
 
 ---
+
 
 ## 📞 Contact & Support
 
-- **Issues**: [GitHub Issues](https://github.com/your-username/rti-gen/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-username/rti-gen/discussions)
+- **Issues**: [GitHub Issues](https://github.com/ChronalLabs/RTI-APPLICATION-GENERATOR/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/ChronalLabs/RTI-APPLICATION-GENERATOR/discussions)
+- **Email**: [contact@chronallabs.com](mailto:contact@chronallabs.com)
 
 ---
 
+
 <p align="center">
-  <strong>Empowering Citizens, One RTI at a Time</strong>
-  <br>
-  Made with ❤️ for GSoC
+   <strong>Empowering Citizens, One RTI at a Time</strong><br>
+   <i>Made with ❤️ for GSoC & Open Source</i>
 </p>
