@@ -1,0 +1,372 @@
+# 🏛️ RTI-Gen — AI-Powered RTI Application Generator
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB.svg)](https://reactjs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-6+-47A248.svg)](https://www.mongodb.com/)
+
+An open-source, intelligent platform that helps citizens generate structured, legally compliant RTI (Right to Information) applications using rule-based logic, validation engines, and configurable templates.
+
+![RTI-Gen Banner](https://via.placeholder.com/800x200?text=RTI-Gen+-+Empowering+Citizens)
+
+---
+
+## 📋 Table of Contents
+
+- [Overview](#-overview)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Architecture](#-architecture)
+- [Getting Started](#-getting-started)
+- [Project Structure](#-project-structure)
+- [API Documentation](#-api-documentation)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 🎯 Overview
+
+### Problem Statement
+
+Many citizens struggle to file RTI applications because:
+- They don't know the correct legal format
+- They're unsure what information to request
+- Templates vary across departments
+- Errors can lead to rejection
+- Language barriers exist
+- Existing tools are static and non-intelligent
+
+### Solution
+
+RTI-Gen solves these problems by:
+- Converting user intent into structured RTI questions
+- Applying rule-based logic to ensure correctness
+- Generating drafts using configurable templates
+- Validating drafts and providing actionable feedback
+- Supporting extensibility for future features like multilingual support
+
+---
+
+## ✨ Features
+
+### Core Features
+- 📝 **Smart RTI Draft Generation** — Convert vague descriptions into legally structured applications
+- 🧠 **Intelligent Question Suggestion** — Auto-generate relevant RTI questions based on intent
+- ⚖️ **Rule-Based Logic Engine** — Dynamically apply RTI-specific rules
+- 📄 **Template-Based Drafting** — Use configurable templates for different departments
+- ✅ **Validation & Scoring** — Get quality scores and improvement suggestions
+- ✏️ **Editable Draft Output** — Fine-tune generated drafts before export
+
+### Advanced Features
+- 🌐 **Multilingual Support** — i18n ready (English, Hindi, and more)
+- 📊 **Knowledge Graph Visualization** — Explore departments and templates visually
+- ⚡ **Redis Caching** — Optimized performance with intelligent caching
+- 📱 **Responsive Design** — Works seamlessly on desktop and mobile
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+| Technology | Purpose |
+|------------|---------|
+| React 19 | UI Framework |
+| Vite | Build Tool & Dev Server |
+| TailwindCSS 4 | Styling |
+| React Router 7 | Routing |
+| React Hook Form | Form Management |
+| Framer Motion | Animations |
+| ReactFlow | Graph Visualization |
+| i18next | Internationalization |
+| Axios | HTTP Client |
+
+### Backend
+| Technology | Purpose |
+|------------|---------|
+| Node.js | Runtime Environment |
+| Express.js | Web Framework |
+| MongoDB | Database |
+| Mongoose | ODM |
+| Redis | Caching |
+| PDFKit | PDF Generation |
+| Natural | NLP Processing |
+| Handlebars | Template Engine |
+| Winston | Logging |
+
+---
+
+## 🏗️ Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     React Frontend                          │
+│  (Landing Page, Generator Workspace, Templates, Graph)      │
+└──────────────────────────┬──────────────────────────────────┘
+                           │
+                           ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   Express.js API Layer                      │
+│         /api/v1/rti  |  /api/v1/questions  |  /api/v1/templates│
+└──────────────────────────┬──────────────────────────────────┘
+                           │
+                           ▼
+┌─────────────────────────────────────────────────────────────┐
+│                    RTI Core Engines                         │
+│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐       │
+│  │  Intent  │ │ Question │ │   Rule   │ │ Template │       │
+│  │  Engine  │ │  Engine  │ │  Engine  │ │  Engine  │       │
+│  └──────────┘ └──────────┘ └──────────┘ └──────────┘       │
+│  ┌──────────┐ ┌──────────┐                                  │
+│  │  Draft   │ │Validation│                                  │
+│  │  Engine  │ │  Engine  │                                  │
+│  └──────────┘ └──────────┘                                  │
+└──────────────────────────┬──────────────────────────────────┘
+                           │
+                           ▼
+┌─────────────────────────────────────────────────────────────┐
+│           MongoDB (Data)    |    Redis (Cache)              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### System Flow
+
+```
+User Input → Intent Detection → Question Generation → Rule Application
+     → Template Selection → Draft Generation → Validation → Final Draft
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js** v18 or higher
+- **MongoDB** v6 or higher
+- **Redis** (optional, for caching)
+- **npm** or **yarn**
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/rti-gen.git
+   cd rti-gen
+   ```
+
+2. **Setup Backend**
+   ```bash
+   cd backend
+   npm install
+   
+   # Create environment file
+   cp .env.example .env
+   
+   # Update .env with your configuration
+   # PORT=5000
+   # NODE_ENV=development
+   # MONGODB_URI=mongodb://localhost:27017/rti-gen
+   # CORS_ORIGIN=http://localhost:3000
+   
+   # Seed the database
+   npm run seed
+   
+   # Start development server
+   npm run dev
+   ```
+
+3. **Setup Frontend**
+   ```bash
+   cd frontend
+   npm install
+   
+   # Start development server
+   npm run dev
+   ```
+
+4. **Access the Application**
+   - Frontend: `http://localhost:5173`
+   - Backend API: `http://localhost:5000`
+   - Health Check: `http://localhost:5000/api/health`
+
+### Quick Start with Docker (Coming Soon)
+
+```bash
+docker-compose up -d
+```
+
+---
+
+## 📁 Project Structure
+
+```
+rti-gen/
+├── README.md                 # This file
+├── PRD.md                    # Product Requirements Document
+│
+├── backend/                  # Express.js Backend
+│   ├── src/
+│   │   ├── app.js           # Express app configuration
+│   │   ├── server.js        # Server entry point
+│   │   ├── config/          # Database & Redis configuration
+│   │   ├── constants/       # Department definitions
+│   │   ├── controllers/     # Request handlers
+│   │   ├── middlewares/     # Error & validation middleware
+│   │   ├── models/          # Mongoose schemas
+│   │   ├── routes/          # API routes
+│   │   ├── services/        # Business logic engines
+│   │   └── utils/           # Helper functions
+│   ├── tests/               # Jest tests
+│   └── package.json
+│
+├── frontend/                 # React Frontend
+│   ├── src/
+│   │   ├── App.jsx          # Main application component
+│   │   ├── main.jsx         # Entry point
+│   │   ├── i18n.js          # Internationalization config
+│   │   ├── components/      # Reusable UI components
+│   │   │   ├── common/      # Buttons, UI elements
+│   │   │   ├── layout/      # Header, Footer
+│   │   │   ├── rti/         # RTI-specific components
+│   │   │   └── templates/   # Template components
+│   │   ├── pages/           # Page components
+│   │   │   ├── LandingPage.jsx
+│   │   │   ├── GeneratorWorkspace.jsx
+│   │   │   ├── Templates.jsx
+│   │   │   └── Graph.jsx
+│   │   └── services/        # API service layer
+│   ├── public/              # Static assets
+│   └── package.json
+│
+└── doc.md                    # Additional documentation
+```
+
+---
+
+## 📚 API Documentation
+
+### Base URL
+```
+http://localhost:5000/api/v1
+```
+
+### Endpoints
+
+#### Health Check
+```http
+GET /api/health
+```
+
+#### RTI Generation
+```http
+POST /api/v1/rti/generate
+Content-Type: application/json
+
+{
+  "description": "Road construction corruption in my area",
+  "department": "Municipal",
+  "applicantName": "John Doe",
+  "applicantAddress": "123 Main St, City"
+}
+```
+
+#### Questions
+```http
+GET /api/v1/questions/suggest?intent=road+construction
+POST /api/v1/questions/generate
+```
+
+#### Templates
+```http
+GET /api/v1/templates
+GET /api/v1/templates/:id
+POST /api/v1/templates
+```
+
+#### Graph
+```http
+GET /api/v1/graph
+```
+
+### Response Format
+```json
+{
+  "success": true,
+  "data": { ... },
+  "message": "Operation successful"
+}
+```
+
+---
+
+## 🧪 Testing
+
+### Backend Tests
+```bash
+cd backend
+npm test              # Run all tests
+npm run test:watch    # Watch mode
+```
+
+### Frontend Tests
+```bash
+cd frontend
+npm run lint          # Run ESLint
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from the community! Here's how you can help:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+### Development Guidelines
+
+- Follow the existing code style
+- Write meaningful commit messages
+- Add tests for new features
+- Update documentation as needed
+
+### Areas for Contribution
+
+- 🌐 Add more language translations
+- 📝 Create new RTI templates
+- 🧪 Write more test cases
+- 📖 Improve documentation
+- 🐛 Fix bugs and issues
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- Inspired by the need to make RTI filing accessible to all citizens
+- Built with ❤️ for civic-tech and open-source communities
+- Special thanks to all contributors
+
+---
+
+## 📞 Contact & Support
+
+- **Issues**: [GitHub Issues](https://github.com/your-username/rti-gen/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/your-username/rti-gen/discussions)
+
+---
+
+<p align="center">
+  <strong>Empowering Citizens, One RTI at a Time</strong>
+  <br>
+  Made with ❤️ for GSoC
+</p>

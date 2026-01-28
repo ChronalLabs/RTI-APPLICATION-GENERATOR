@@ -1,0 +1,43 @@
+{
+  "name": "rti-gen-backend",
+  "version": "1.0.0",
+  "description": "RTI-Gen - AI-Powered RTI Application Generator Backend",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/",
+    "seed": "node src/database/seed.js"
+  },
+  "keywords": [
+    "rti",
+    "right-to-information",
+    "civic-tech",
+    "document-generator"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "handlebars": "^4.7.8",
+    "helmet": "^8.1.0",
+    "lodash": "^4.17.23",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.1",
+    "natural": "^8.1.0",
+    "pdfkit": "^0.17.2",
+    "redis": "^5.10.0",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.3"
+  }
+}
